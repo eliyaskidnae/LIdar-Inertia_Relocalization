@@ -36,6 +36,7 @@ private:
   int current_index_;
   int last_lio_index_;
   Pose3 current_pose_;
+  Pose3 previous_pose_;
   Pose3 smoothed_translation;
   rclcpp::Time last_odom_time_;
 
@@ -503,6 +504,7 @@ private:
   void publishEstimate()
   {
     if (last_lio_index_ < 0)
+
       return;
 
     try
@@ -553,10 +555,22 @@ private:
         tf_broadcaster_->sendTransform(tf_msg);
 
         // Update and publish path
-        geometry_msgs::msg::PoseStamped pose_stamped;
-        pose_stamped.header = odom_msg.header;
-        pose_stamped.pose = odom_msg.pose.pose;
-        path_.poses.push_back(pose_stamped);
+        // check if it moves more than 0.2 meters from the last pose in the path
+        if (!path_.poses.empty())
+        {
+          geometry_msgs::msg::Pose last_pose = path_.poses.back().pose;
+          double dx = current_pose_.x() - last_pose.position.x;
+          double dy = current_pose_.y() - last_pose.position.y;
+          double dz = current_pose_.z() - last_pose.position.z;
+          double distance = std::sqrt(dx * dx + dy * dy + dz * dz);
+          if (distance > 0.5)
+          {
+            geometry_msgs::msg::PoseStamped pose_stamped;
+            pose_stamped.header = odom_msg.header;
+            pose_stamped.pose = odom_msg.pose.pose;
+            path_.poses.push_back(pose_stamped);
+          }
+        }
 
         nav_msgs::msg::Path path;
         path.header = odom_msg.header;
