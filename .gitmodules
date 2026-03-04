@@ -1,0 +1,3 @@
+[submodule "ndt_omp_ros2"]
+	path = ndt_omp_ros2
+	url = git@github.com:eliyaskidnae/ndt_omp_ros2.git
