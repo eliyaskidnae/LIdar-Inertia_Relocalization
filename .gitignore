@@ -1,0 +1,5 @@
+.vscode
+build
+map/bin_tc-2017-10-15--ndmap.pcd
+# any file inside map/ will be ignored, but we need to keep the map/ directory itself for git to track it
+map/

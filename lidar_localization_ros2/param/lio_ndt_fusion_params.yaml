@@ -1,0 +1,46 @@
+# LIO-NDT Fusion Node Parameters
+/**:
+  ros__parameters:
+    # Topics
+    topics:
+      lio: "/Odometry"
+      ndt: "/pcl_pose"
+      initial_pose: "/initialpose"
+      fused_odom: "/fused_odom"
+      fused_pose: "/fused_pose"
+      fused_path: "/fused_path"
+    
+    # Frames
+    frames:
+      map: "map"
+      odom: "odom"
+      base: "base_link"
+    
+    # Noise model parameters (6 DOF: x, y, z, roll, pitch, yaw)
+    noise:
+      prior:
+        sigmas: [0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001]  # Very tight prior for initial pose
+      lio_between:
+        sigmas: [0.4, 0.4, 1.0, 0.08, 0.08, 0.08]  # LIO odometry noise
+      ndt_prior:
+        sigmas: [0.2, 0.2, 0.1, 0.03, 0.03, 0.03]      # NDT localization noise
+    
+    # Smoother configuration
+    smoother:
+      lag_duration: 600.0           # seconds
+      relinearize_threshold: 0.12
+      relinearize_skip: 1
+    
+    # NDT filtering
+    ndt:
+      decimation_factor: 5          # Process every 5th NDT message
+      mahalanobis_threshold: 7.0    # Reject NDT poses above this distance
+    
+    # Pose smoothing (exponential moving average)
+    pose:
+      smoothing_alpha: 0.5          # 0.0 = no smoothing, 1.0 = very smooth
+    
+    # Logging
+    logging:
+      enable: false                  # Enable/disable execution time logging
+      directory: "data/optimization_log/"  # Log directory (must exist)
