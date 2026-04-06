@@ -1,3 +1,6 @@
-[submodule "ndt_omp_ros2"]
-	path = ndt_omp_ros2
-	url = https://github.com/rsasaki0109/ndt_omp_ros2
+[submodule "external/ndt_omp_ros2"]
+	path = external/ndt_omp_ros2
+	url = https://github.com/rsasaki0109/ndt_omp_ros2.git
+[submodule "external/fast_lio"]
+	path = external/fast_lio
+	url = https://github.com/hku-mars/FAST_LIO.git
