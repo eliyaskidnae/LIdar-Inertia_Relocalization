@@ -28,7 +28,7 @@ world autonomous navigation.
               padding:8px;             /* optional border/padding */
               box-shadow:0 0 4px rgba(0,0,0,0.2); /* optional */
               ">
-    <img src="media/system_overview.drawio.png" alt="Figure 1"/>
+    <img src="lidar_localization_ros2/media/system_overview.drawio.png" alt="Figure 1"/>
     <p style="text-align:center;">Figure 1: Complete Diagram of The Localization System</p>
   </div>
 </div>
