@@ -57,3 +57,8 @@ ros2 launch fast_lio mapping.launch.py config_file:='ouster64.yaml' #run FAST-LI
 ros2 launch lidar_localization_ros2 lidar_localization.launch.py #run scan to map localization
 ros2 launch lidar_localization_ros2 fusion.launch.py #run the fusion of FAST-LIO2 and scan to map localization
 ```
+## 📹 Demo Video
+
+[![Watch the video](https://www.youtube.com/watch?v=dNa92Y9yDuk/0.jpg)](https://www.youtube.com/watch?v=dNa92Y9yDuk)
+
+Click the image above or [watch the demo on YouTube](https://www.youtube.com/watch?v=dNa92Y9yDuk).
