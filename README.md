@@ -34,15 +34,21 @@ world autonomous navigation.
   </div>
 </div>
 
-<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-    <img width="200" height="340" alt="Hunter_sensor" 
-         src="https://github.com/user-attachments/assets/6680a43c-4cd2-4ec7-876a-3684508e4ca9" />
+<table>
+  <tr>
+    <td align="center">
+      <img width="300" alt="Hunter_sensor"
+      src="https://github.com/user-attachments/assets/6680a43c-4cd2-4ec7-876a-3684508e4ca9" />
+    </td>
 
-    <img width="200" height="340" alt="Hunter_body" 
-         src="https://github.com/user-attachments/assets/d7cd62a7-ad60-490c-88c5-e2f9fdff10db" />
-</div>
+    <td align="center">
+      <img width="300" alt="Hunter_body"
+      src="https://github.com/user-attachments/assets/d7cd62a7-ad60-490c-88c5-e2f9fdff10db" />
+    </td>
+  </tr>
+</table>
 
-<p style="text-align:center;">Figure 2: Sensor setup</p>
+<p align="center"><b>Figure 2:</b> Sensor setup</p>
 
 
 
