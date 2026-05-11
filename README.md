@@ -42,7 +42,7 @@ world autonomous navigation.
     </td>
     <td align="center">
       <img width="300" alt="Hunter_body"
-      <img width="1357" height="2690" alt="Hunter_body" src="https://github.com/user-attachments/assets/86890115-b8d2-4f3f-8aaf-5e0450c00d81" />
+      <img width="300" alt="Hunter_body" src="https://github.com/user-attachments/assets/86890115-b8d2-4f3f-8aaf-5e0450c00d81" />
     </td>
     
   </tr>
