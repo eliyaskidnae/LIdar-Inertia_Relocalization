@@ -33,12 +33,15 @@ world autonomous navigation.
     <p style="text-align:center;">Figure 1: Complete Diagram of The Localization System</p>
   </div>
 </div>
+<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+    <img width="200" height="340" alt="Hunter_sensor" 
+         src="https://github.com/user-attachments/assets/6680a43c-4cd2-4ec7-876a-3684508e4ca9" />
 
-<div>    
-    <img width="200" height="340" alt="Hunter_sensor" src="https://github.com/user-attachments/assets/6680a43c-4cd2-4ec7-876a-3684508e4ca9" />
-    <img width="200" height="340" alt="Hunter_body" src="https://github.com/user-attachments/assets/d7cd62a7-ad60-490c-88c5-e2f9fdff10db" />
-     <p style="text-align:center;">Figure 2: Sensor setup</p>
+    <img width="200" height="340" alt="Hunter_body" 
+         src="https://github.com/user-attachments/assets/d7cd62a7-ad60-490c-88c5-e2f9fdff10db" />
 </div>
+
+<p style="text-align:center;">Figure 2: Sensor setup</p>
 
 
 
